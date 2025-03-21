@@ -7,11 +7,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Device } from "../shared-types";
+import { Device, DeviceStatus } from "../shared-types";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "../ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-
+ 
 interface DeviceTableProps {
   rows: Device[];
 }
@@ -39,8 +38,7 @@ export const DeviceTable = ({ rows }: DeviceTableProps) => {
               <div className="flex items-center space-x-2">
                 <Switch
                   id="airplane-mode"
-                  checked={row.powered}
-                  onCheckedChange={() => {}}
+                   onCheckedChange={() => {}}
                 />
                 <Label htmlFor="airplane-mode">Powered</Label>
              

@@ -1,16 +1,14 @@
-enum DeviceStatus{
-    Charging='charging',
-    Powered='powered'
-
+export enum DeviceStatus {
+  Charging = "charging",
+  Powered = "powered",
+  Disconnected = "disconnected",
 }
-interface BaseDevice{
-    ip: string;
-    mac: string;
-    name: string;
+interface BaseDevice {
+  ip: string;
+  mac: string;
+  name: string;
 }
 
 export interface Device extends BaseDevice {
-    powered:boolean
-    status:DeviceStatus
-
+   status: DeviceStatus;
 }
